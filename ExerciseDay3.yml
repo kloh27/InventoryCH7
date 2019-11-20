@@ -1,7 +1,7 @@
 ---
-- Name: Exercise to create group, user, add user to group and user profile
-  Hosts: All
-  Tasks: 
+- name: Exercise to create group, user, add user to group and user profile
+  hosts: All
+  tasks: 
   - name: Create group
     win_group:
       name: Wednesday
@@ -17,3 +17,4 @@
     win_user_profile:
       username: Allan
       name: Present
+
