@@ -4,7 +4,7 @@
   tasks:
   - name: Check the information on the file if the file exists
     win_stat:
-       path: C:\Temp\tEST.CONF
+       path: C:\Temp\test.conf
     register: out
   - name: Showing the statistics
     debug:
