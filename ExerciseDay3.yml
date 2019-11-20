@@ -1,6 +1,6 @@
 ---
 - name: Exercise to create group, user, add user to group and user profile
-  hosts: All
+  hosts: all
   tasks: 
   - name: Create group
     win_group:
