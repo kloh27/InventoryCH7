@@ -8,4 +8,4 @@
     register: out
   - name: Showing the statistics
     debug:
-      var: out 
+      var: out
