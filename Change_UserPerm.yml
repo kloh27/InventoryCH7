@@ -1,0 +1,7 @@
+---
+- name: Change Owner to the file
+  win_owner: 
+     path: C:\Temp\test.conf
+     user: user_Cindy
+     recurse: no
+
