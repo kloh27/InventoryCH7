@@ -1,0 +1,19 @@
+---
+- Name: Exercise to create group, user, add user to group and user profile
+  Hosts: All
+  Tasks: 
+  - name: Create group
+    win_group:
+      name: Wednesday
+      description: Created on Wed
+      state: Present
+
+  - name: Create user
+    win_user:
+      name: Allan
+      state: Present
+
+  - name: Update User Profile
+    win_user_profile:
+      username: Allan
+      name: Present
