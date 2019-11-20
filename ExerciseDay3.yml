@@ -18,3 +18,9 @@
       username: Allan
       name: Present
 
+  - name: Add Allan to Wednesday
+    win_group_membership:
+      name: Wednesday
+      members: Allan
+      state: present
+
