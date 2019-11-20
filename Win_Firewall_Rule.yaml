@@ -20,3 +20,4 @@
     register: out
   - name: Printing the output
     debug: 
+      var: out
