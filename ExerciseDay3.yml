@@ -8,19 +8,17 @@
       description: Created on Wed
       state: Present
 
+  - name: Create group
+    win_group:
+      name: Thursday
+      description: Created on Wed
+      state: Present
+
   - name: Create user
     win_user:
       name: Allan
       state: Present
-
-  - name: Update User Profile
-    win_user_profile:
-      username: Allan
-      name: Present
-
-  - name: Add Allan to Wednesday
-    win_group_membership:
-      name: Wednesday
-      members: Allan
-      state: present
+      group:
+      - Wednesday
+      - Thursday
 
