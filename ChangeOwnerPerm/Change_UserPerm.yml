@@ -1,5 +1,7 @@
 ---
 - name: Change Owner to the file
+  hosts: all
+  tasks:
   win_owner: 
      path: C:\Temp\test.conf
      user: user_Cindy
