@@ -2,7 +2,7 @@
 - name: Testing firewall
   hosts: all
   tasks:
-  - name: Denying port 80
+  - name: Denying port 80 (Absent - Allow, Present - Blocked)
     win_firewall_rule:
       name: testing
       state: absent
