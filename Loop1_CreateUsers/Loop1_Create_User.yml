@@ -2,13 +2,6 @@
 - name: Exercise to create 5 new users using loop
   hosts: all
   tasks: 
- # usr:
- #   - Pickahu
- #   - Bulbasaur
- #   - Dragonair
- #   - Goldeen
- #   - Rapidash
-
   - name: Create 5 new users using loop
     win_user:
       name: "{{ item.name }}"
@@ -16,14 +9,13 @@
       description: "{{ item.desc }}"
       state: Present
     loop:
-    - { name: 'Pickahu', grp: 'Thursday', dec: 'Electric Pokemon'} #Old format
-    - { name: 'Bulbasur', grp: 'Thursday', dec: 'Plant Pokemon'} #Old format
-    - { name: 'Rapidash', grp: 'Thursday', dec: 'Fire Pokemon'} #Old format
-    - { name: 'Goldeen', grp: 'Thursday', dec: 'Water Pokemon'} #Old format
-    - { name: 'Dragonair', grp: 'Thursday', dec: 'Dragon Pokemon'} #Old format
+    - { name: 'Pickahu', grp: 'Thursday', desc: 'Electric Pokemon'} #Old format
+    - { name: 'Bulbasur', grp: 'Thursday', desc: 'Plant Pokemon'} #Old format
+    - { name: 'Rapidash', grp: 'Thursday', desc: 'Fire Pokemon'} #Old format
+    - { name: 'Goldeen', grp: 'Thursday', desc: 'Water Pokemon'} #Old format
+    - { name: 'Dragonair', grp: 'Thursday', desc: 'Dragon Pokemon'} #Old format
 
     # NEW / Block Format - can define information in multiple lines
-
     - name: 'Squirtle'
       grp: 'Thursday'
       desc: 'Water Pokemon'
