@@ -19,5 +19,5 @@
   handlers:
   - name: reboot server
     win_reboot:
-    ...
-    
+
+
