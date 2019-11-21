@@ -18,6 +18,7 @@
 ...
 
 ## 
+# 
 # Condition "AND" - Both condition must be met.
 # Example:
 #    when: ansible_facts['distribution'] == "Microsoft Windows Server 2016 Core" and
@@ -37,6 +38,8 @@
 # Complex Conditions
 #  (condition1 = value OR Condition2 = value) And (condition1 = value OR Condition2 = value)
 #  (condition1 = value OR Condition2 = value) Or (condition1 = value OR Condition2 = value)
+#
+
 
 
 
