@@ -1,0 +1,20 @@
+--- 
+- name: Testing Handlers
+  hosts: all
+  tasks:
+  - name: Install DotNet4.6.1
+    win_chocolatey:
+      name: vlc
+      state: present
+    notify: 
+    - reboot server
+  - name: failing the task
+    debug:
+      msg: failing the task as testing requires
+    failed_when: true
+  - name: This is another task
+    debug:
+      final task
+  handlers:
+  - name: reboot server
+    win_reboot:
