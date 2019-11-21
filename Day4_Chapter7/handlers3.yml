@@ -1,0 +1,22 @@
+--- 
+- name: Testing Handlers
+  hosts: all
+  tasks:
+  - name: Install DotNet4.6.1
+    win_chocolatey:
+      name: 7zip
+      state: present
+    notify: 
+    - reboot server
+  - name: failing the task
+    debug:
+      msg: failing the task as testing requires
+    failed_when: true
+    ignore_errors: true
+  - name: This is another task
+    debug:
+      msg: final task
+  handlers:
+  - name: reboot server
+    win_reboot:
+
