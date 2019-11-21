@@ -1,0 +1,25 @@
+--- 
+- name: Testing Handlers
+  hosts: all
+  force_handlers: true
+  tasks:
+  - block:
+    - name: Install DotNet4.6.1
+      win_chocolatey:
+        name: flashplayerpp
+        state: present
+    rescue:
+    - name: Install DotNet4.6.1
+      win_chocolatey:
+        name: flashplayerppapi
+        state: absent
+    always:
+
+  - block:
+    rescue:
+    - name: This is a task
+      debug:
+        msg: hello World
+
+
+
