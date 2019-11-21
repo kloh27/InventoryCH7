@@ -3,7 +3,7 @@
   hosts: all
   vars:
     run_my_task: true
-   tasks:
+  tasks:
    - name: Install IIS Web-Server with sub features and management tools
      win_feature:
        name: Web-Server
