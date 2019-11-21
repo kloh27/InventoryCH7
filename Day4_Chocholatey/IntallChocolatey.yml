@@ -1,0 +1,12 @@
+---
+- name: Exercise to create 5 new users using loop
+  hosts: all
+  tasks: 
+  - name: Install Packages
+    win_chocolatey:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - jre8
+      - javaruntime-preventasktoolbar
+      - dropbox  
