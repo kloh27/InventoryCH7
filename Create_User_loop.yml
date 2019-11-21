@@ -11,7 +11,7 @@
 
   - name: Create 5 new users using loop
     win_user:
-      name: "{{ item }}"
+      name: "{{ item.name }}"
       state: Present
       group:
         - Thursday
