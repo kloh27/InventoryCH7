@@ -4,12 +4,12 @@
   force_handlers: true
   tasks:
   - block:
-    - name: Install DotNet4.6.1
+    - name: Install DotNet4.6.1 (Block)
       win_chocolatey:
         name: flashplayerpp
         state: present
     rescue:
-    - name: Install DotNet4.6.1
+    - name: Install DotNet4.6.1 (Rescue)
       win_chocolatey:
         name: flashplayerppapi
         state: absent
