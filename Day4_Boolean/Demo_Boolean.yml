@@ -1,3 +1,4 @@
+---
 - name: Simple Boolean Task Demo
   hosts: all
   vars:
