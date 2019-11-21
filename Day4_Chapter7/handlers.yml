@@ -6,7 +6,7 @@
     win_chocolatey:
       name: DotNet4.6.1
       state: present
-    modify: 
+    notify: 
     - reboot server
   handlers:
   - name: reboot server
