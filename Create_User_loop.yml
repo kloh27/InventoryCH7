@@ -2,12 +2,12 @@
 - name: Exercise to create 5 new users using loop
   hosts: all
   tasks: 
-  usr:
-    - Pickahu
-    - Bulbasaur
-    - Dragonair
-    - Goldeen
-    - Rapidash
+ # usr:
+ #   - Pickahu
+ #   - Bulbasaur
+ #   - Dragonair
+ #   - Goldeen
+ #   - Rapidash
 
   - name: Create 5 new users using loop
     win_user:
