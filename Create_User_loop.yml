@@ -12,7 +12,7 @@
   - name: Create 5 new users using loop
     win_user:
       name: {{ item }}
-        state: Present
-        group:
-        - Thursday
-        loop: {{ usr }}
+      state: Present
+      group:
+      - Thursday
+      loop: {{ usr }}
