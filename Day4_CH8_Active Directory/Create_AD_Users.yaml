@@ -1,0 +1,30 @@
+---
+- name: Creating users
+  hosts: all
+  tasks:
+  - name: Creating group
+    win_domain_group:
+      name: developers
+      description: Developers Group
+      state: present
+      scope: global
+  - name: Adding now
+    win_domain_user:
+      name: rajat
+      firstname: Rajat
+      surname: Agrawal
+      company: Red Hat Inc.
+      password: r3dh4t1!
+      state: present
+      street: 123 E. Davie St.
+      city: Raleigh
+      state_province: NC
+      postal_code: 12345
+      country: US
+      attributes:
+        telephoneNumber: 111-123456
+      password_expired: no
+      groups_action: add
+      groups:
+          - Domain Admins
+          - developers
