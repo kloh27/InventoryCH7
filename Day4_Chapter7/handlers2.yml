@@ -4,7 +4,7 @@
   tasks:
   - name: Install DotNet4.6.1
     win_chocolatey:
-      name: vlc
+      name: winrar
       state: present
     notify: 
     - reboot server
@@ -15,7 +15,7 @@
     ignore_errors: true
   - name: This is another task
     debug:
-        final task
+      msg: final task
   handlers:
   - name: reboot server
     win_reboot:
