@@ -17,8 +17,6 @@
     - name: I am Thanos
       debug:
         msg: no one can stop me, hahahahaha
-  - block:
-    rescue:
     - name: This is a task
       debug:
         msg: hello World
